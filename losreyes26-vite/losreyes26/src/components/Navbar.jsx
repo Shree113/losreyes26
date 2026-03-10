@@ -4,6 +4,7 @@ import logoImg from '../assets/title.png';
 
 const Navbar = ({ activeSection, onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -11,22 +12,41 @@ const Navbar = ({ activeSection, onNavigate }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (section) => {
+    onNavigate(section);
+    setMenuOpen(false);
+  };
+
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''} ${menuOpen ? styles.menuOpen : ''}`}>
       <div className={styles.logo}>
         <div className={styles.logoIcon}>
           <img src={logoImg} alt="LOS REYES" className={styles.logoImage} />
         </div>
-        <span className={styles.logoText}>LOS REYES</span>
-        <span className={styles.logoYear}>'26</span>
+        <div className={styles.logoTextWrapper}>
+          <span className={styles.logoText}>LOS REYES</span>
+          <span className={styles.logoYear}>'26</span>
+        </div>
       </div>
 
-      <ul className={styles.navLinks}>
+      <button 
+        className={styles.mobileMenuBtn} 
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle Menu"
+      >
+        <div className={styles.hamburger}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+
+      <ul className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ''}`}>
         {['home', 'events', 'footer'].map((item) => (
           <li key={item}>
             <button
               className={`${styles.navLink} ${activeSection === item ? styles.active : ''}`}
-              onClick={() => onNavigate(item)}
+              onClick={() => handleNavClick(item)}
             >
               <span className={styles.navLinkText}>{item.toUpperCase()}</span>
               <span className={styles.navUnderline}></span>

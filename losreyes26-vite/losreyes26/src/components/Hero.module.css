@@ -343,3 +343,72 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 20px 60px;
+  }
+
+  .collegeShort {
+    font-size: 1.4rem;
+  }
+
+  .collegeFull {
+    font-size: 0.6rem;
+    max-width: 200px;
+  }
+
+  .deptName {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+  }
+
+  .titleWrapper {
+    padding: 20px 30px;
+  }
+
+  .symposiumLabel span:not(.labelLine) {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+  }
+
+  .date {
+    font-size: 0.85rem;
+  }
+
+  .inviteText {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+  }
+
+  .heroCta {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .ctaPrimary, .ctaSecondary {
+    width: 100%;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collegeBadge {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .collegeDivider {
+    width: 40px;
+    height: 1px;
+  }
+
+  .collegeFull {
+    text-align: center;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+}

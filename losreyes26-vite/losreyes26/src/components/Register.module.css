@@ -466,36 +466,59 @@
 @media (max-width: 900px) {
   .container {
     padding: 40px 15px;
+    height: auto;
+    min-height: 100vh;
   }
 
   .grid {
     grid-template-columns: 1fr;
     gap: 30px;
+    margin-bottom: 30px;
   }
   
   .actionColumn {
     position: static;
+    order: -1; /* Move poster and button to top on mobile for immediate action */
   }
 
   .bottomCoordsGrid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-  
+
   .title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .header {
+    margin-bottom: 24px;
   }
 }
 
 @media (max-width: 600px) {
-  .form {
-    padding: 25px;
-  }
-  
-  .row {
-    grid-template-columns: 1fr;
-  }
-  
   .container {
-    padding: 60px 15px;
+    padding: 30px 12px;
+  }
+
+  .registerCard {
+    padding: 20px;
+  }
+
+  .detailCard {
+    padding: 20px;
+  }
+
+  .bottomCoordinators {
+    padding: 20px;
+  }
+
+  .coordsList {
+    justify-content: center;
+  }
+
+  .coordCard {
+    min-width: 100%;
   }
 }
+

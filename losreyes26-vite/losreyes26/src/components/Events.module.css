@@ -109,9 +109,18 @@
 }
 
 @media (max-width: 768px) {
+  .events {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .gridTwoCols {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    max-width: 500px;
+  }
+
+  .dayLabel {
+    font-size: 1.6rem;
   }
 }
 
@@ -230,4 +239,30 @@
   background: #ffa500;
   box-shadow: 0 6px 30px rgba(255,140,0,0.5);
   transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .events {
+    padding: 60px 20px 40px;
+  }
+
+  .dayLabel {
+    font-size: 1.4rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    gap: 12px;
+  }
+
+  .webinarContent {
+    padding: 20px;
+  }
+
+  .webinarBtn {
+    align-self: stretch;
+  }
 }

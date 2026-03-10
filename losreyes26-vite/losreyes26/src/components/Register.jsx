@@ -3,6 +3,12 @@ import { useParams, Link } from 'react-router-dom';
 import { eventsData } from '../data/events';
 import styles from './Register.module.css';
 
+import codePoster from '../assets/code-poster.jpg';
+
+const posters = {
+  'code-poster.jpg': codePoster
+};
+
 const CoordinatorCard = ({ name, role, phone }) => (
   <div className={styles.coordCard}>
     <div className={styles.coordAvatar}>
@@ -43,9 +49,7 @@ const Register = () => {
     setEvent(foundEvent);
 
     if (foundEvent && foundEvent.poster) {
-      import(`../assets/${foundEvent.poster}`).then(module => {
-        setPosterUrl(module.default);
-      }).catch(err => console.error("Poster not found:", err));
+      setPosterUrl(posters[foundEvent.poster] || null);
     } else {
       setPosterUrl(null);
     }

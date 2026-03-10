@@ -42,7 +42,7 @@ export const eventsData = {
         id: 'debug',
         name: 'CODE DEBUGGING',
         max: 1,
-        poster: 'Code Poster Final.jpg.jpeg',
+        poster: 'code-poster.jpg',
         googleFormLink: 'https://docs.google.com/forms/d/e/1FAIpQLScF9ItKaym5Yjh9wAPFxjRRj8aXOEY_bpMsejOIEz_e42TE1g/viewform',
         description: 'Race against time to identify and fix bugs in complex code snippets. Test your debugging skills across multiple programming languages and problem domains.',
         details: 'Participants receive buggy code and must identify and fix all errors within the time limit. Points awarded based on correctness and time taken.',
@@ -119,7 +119,7 @@ export const eventsData = {
   day2: {
     webinar: {
       id: 'webinar',
-      name: 'CAREER AI NEXUS \'26',
+      name: 'CAREER AI NEXUS 2026',
       googleFormLink: 'https://docs.google.com/forms/d/e/1FAIpQLScF9ItKaym5Yjh9wAPFxjRRj8aXOEY_bpMsejOIEz_e42TE1g/viewform',
       description: 'An exclusive webinar exploring the intersection of artificial intelligence and career development. Industry experts share insights on emerging AI trends, career pathways in tech, and how to leverage AI tools for professional growth. A must-attend for students aspiring to build careers in cutting-edge technology domains.',
       coordinators: {

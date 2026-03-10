@@ -400,3 +400,56 @@
   line-height: 1.8;
   letter-spacing: 0.05em;
 }
+
+@media (max-width: 900px) {
+  .topCoordinators {
+    flex-direction: column;
+  }
+
+  .coordDivider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .coordGroup {
+    padding: 20px;
+  }
+
+  .regDetails {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerContent {
+    padding: 0 20px 40px;
+    gap: 30px;
+  }
+
+  .regTitle {
+    padding: 15px 20px;
+  }
+
+  .regBox {
+    padding: 20px;
+  }
+
+  .regDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .noteForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}

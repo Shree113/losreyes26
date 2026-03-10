@@ -216,3 +216,26 @@
   left: 0;
   color: #ff8c00;
 }
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  .eventName {
+    font-size: 0.85rem;
+  }
+
+  .teamSize {
+    padding: 3px 8px;
+  }
+
+  .teamSize span {
+    font-size: 0.65rem;
+  }
+
+  .btnRegister, .btnDetails {
+    font-size: 0.55rem;
+    padding: 8px 12px;
+  }
+}
